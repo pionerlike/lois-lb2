@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Lois 2</title>
+</head>
+<body>
+<div>
+    <form name="form" class="calculator-container">
+        <label>Проверить, являются ли формулы равносильными</label>
+        <br/>
+        <label id="result"></label>
+        <input class="form-control input-panel" id="panel1" name="panel1" placeholder="Введите первую формулу"/>
+		<br/>
+		<input class="form-control input-panel" id="panel2" name="panel2" placeholder="Введите вторую формулу"/>
+        <div class="btn-container">
+            <input class="form-group btn btn-default btn-success" id="toCheck" type="button" value="ДА" onclick="start(true)"/>
+			<input class="form-group btn btn-default btn-danger" id="toCheck" type="button" value="НЕТ" onclick="start(false)"/>
+			<input id="toCheck" type="button" value="Сгенерировать формулы" onclick="placeFormula()"/>
+        </div>
+		
+			<span id='firstTable'>
+				<div id="firstTableLabel"></div>
+				<table class ="table table-sm" id="firstTruthTable"></table>
+			</span>
+			<span id='secondTable'>
+				<div id="secondTableLabel"></div>
+				<table class ="table table-sm" id="secondTruthTable"></table>
+			</span>
+		
+    </form>
+</div>
+
+<script src="./assets/js/jquery-3.3.1.slim.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="lab2.js"></script>
+<script src="generate.js"></script>
+</body>
+</html>
